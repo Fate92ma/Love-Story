@@ -1,0 +1,629 @@
+/*
+
+Template Name: Love Story
+Template Url: https://fate92ma.github.io/Love-Story
+Contact Me: fatema131khaled@gmail.com
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+@font-face {
+    font-family: 'Ostrich Sans Bold';
+    font-style: normal;
+    src: local('Ostrich Sans Bold'), local('OstrichSans-Bold'),
+        url(../fonts/ostrich-sans-bold.woff) format('woff'),
+        url(../fonts/ostrich-sans-bold.ttf) format('truetype')
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box
+}
+
+body {
+    font-family: 'Roboto Slab'
+}
+
+h1,
+h2,
+.intro article .left b,
+.intro article .right b {
+    font-family: 'Ostrich Sans Bold'
+}
+
+h1,
+button {
+    cursor: pointer
+}
+
+button,
+input,
+textarea {
+    padding: 10px;
+    font-size: 16px;
+    outline: 0;
+    width: fit-content;
+    border: none
+}
+
+a,
+input,
+button {
+    outline: 0;
+    text-decoration: none
+}
+
+img {
+    max-width: 100%
+}
+
+li {
+    list-style: none
+}
+
+/* Start Template Colors */
+
+:root {
+    --main: #de675f;
+    --sub: #987c61;
+    --bg: #f7f7f7;
+    --text: #6f6f6f;
+    --white: #fff;
+    --border: #e4e4e4
+}
+
+/* End Template Colors */
+
+/* Start main */
+
+main {
+    display: flex
+}
+
+#mainContainer {
+    width: 75%;
+    margin-left: auto
+}
+
+@media (max-width: 1050px) {
+    #mainContainer {
+        border: 1px solid var(--border);
+        width: 97%;
+        margin: 45px auto
+    }
+}
+
+/* End main */
+
+/* Start Nav */
+
+aside {
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    width: 25%;
+    height: 100vh;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    background: url(../img/placeholder.jpg) center/cover
+}
+
+aside nav {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase
+}
+
+aside nav h1 {
+    background: var(--main);
+    color: var(--white);
+    font-size: 100px;
+    padding: 50px 10px
+}
+
+aside nav a {
+    padding: 20px 10px;
+    background: rgba(236, 109, 101, 0.8);
+    border-top: 1px solid #fb918a;
+    font-size: 14px;
+    color: var(--white);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+aside nav a:hover,
+.nav-link.nav-active {
+    background: var(--white);
+    color: var(--main)
+}
+
+aside nav span {
+    background: url(../img/ribbon.png);
+    height: 8px
+}
+
+.menu {
+    position: fixed;
+    color: var(--main);
+    cursor: pointer
+}
+
+.asideMini {
+    top: 45px;
+    left: 0
+}
+
+@media (max-width: 1050px) {
+    .menu {
+        z-index: 9999
+    }
+
+    aside {
+        width: 50%;
+        left: -1000px
+    }
+}
+
+@media (max-width: 575px) {
+    aside {
+        width: 100%
+    }
+}
+
+/* End Nav */
+
+/* Start Intro */
+
+.intro {
+    padding: 50px 0;
+    text-align: center
+}
+
+.title {
+    position: relative
+}
+
+.title h2 {
+    overflow-wrap: anywhere;
+    text-align: center;
+    padding-bottom: 14px;
+    border-bottom: 4px double var(--sub);
+    color: var(--main);
+    font-size: 96px;
+    width: fit-content;
+    margin: 20px auto
+}
+
+.title h2 i {
+    color: var(--sub);
+    font-size: 40px
+}
+
+.title img {
+    top: 96px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.intro strong {
+    color: var(--sub);
+    text-transform: uppercase;
+    font-size: 16px
+}
+
+.intro .couple {
+    margin: 20px 0
+}
+
+.intro article {
+    color: var(--sub);
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--border)
+}
+
+.intro article .left,
+.intro article .right {
+    display: flex;
+    flex-direction: column
+}
+
+.intro article .left span,
+.intro article .right span {
+    margin: 5px;
+    font-weight: bold;
+    display: block;
+    font-size: 25px
+}
+
+.intro article .left b {
+    display: block;
+    font-size: 190px
+}
+
+.intro article .right span {
+    font-size: 25px
+}
+
+.intro article .right b,
+.intro article .right b {
+    margin: 10px 0;
+    font-size: 60px
+}
+
+.intro article .right i {
+    font-size: 35px
+}
+
+.btn {
+    display: block;
+    margin: 60px auto 15px auto;
+    border-radius: 3px;
+    background: var(--main);
+    color: var(--white)
+}
+
+.btn i {
+    margin: 0 10px
+}
+
+@media (max-width: 800px) {
+    .intro article {
+        padding: 5px;
+        padding-bottom: 20px;
+        flex-direction: column
+    }
+}
+
+@media (max-width: 575px) {
+    .title h2 {
+        display: flex;
+        flex-direction: column
+    }
+}
+
+@media (max-width: 400px) {
+    .title h2 {
+        font-size: 80px
+    }
+
+    .intro article .left b {
+        font-size: 100px
+    }
+
+    .intro article .right b,
+    .intro article .right b {
+        font-size: 50px
+    }
+
+    .intro article .right i {
+        font-size: 30px
+    }
+
+    .btn {
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px
+    }
+
+    .btn i {
+        margin: 10px 0
+    }
+}
+
+/* End Intro */
+
+/* Start Our Story */
+
+#our-story,
+#photos,
+#groomsmen,
+#bridesmaids,
+#gifts,
+#rsvp {
+    padding: 100px 0;
+    background: var(--bg)
+}
+
+.container {
+    padding: 10px;
+    width: 90%;
+    margin: 40px auto;
+    display: flex
+}
+
+.container div {
+    padding: 0 10px;
+    flex: 1;
+    color: var(--text)
+}
+
+.container div:nth-of-type(1) {
+    border-right: 1px solid var(--border)
+}
+
+.container div p {
+    font-size: 16px;
+    margin: 40px 0
+}
+
+.container div strong {
+    display: block;
+    text-align: right
+}
+
+@media (max-width: 1050px) {
+    .container {
+        width: 100%
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        text-align: center
+    }
+
+    .container div {
+        padding: 10px
+    }
+
+    .container div:nth-of-type(1) {
+        border-right: none;
+        border-bottom: 1px solid var(--border)
+    }
+}
+
+@media (max-width: 400px) {
+    .title img {
+        display: none
+    }
+}
+
+/* End Our Story */
+
+/* Start Photos */
+
+#photos,
+#bridesmaids,
+#rsvp {
+    background: none
+}
+
+.fulid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto
+}
+
+@media (max-width: 1050px) {
+    .fulid-container a {
+        margin: 10px
+    }
+}
+
+/* End Photos */
+
+/* Start Groomsmen, Bridesmaids */
+
+#mixedSlider,
+#mixedSlider2 {
+    padding: 10px;
+    margin: 40px auto;
+    width: 85% ! important;
+    position: relative
+}
+
+#mixedSlider .MS-content,
+#mixedSlider2 .MS-content {
+    white-space: nowrap;
+    overflow: hidden
+}
+
+#mixedSlider .MS-content .ms-item,
+#mixedSlider2 .MS-content .ms-item {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: normal
+}
+
+#mixedSlider .MS-controls,
+#mixedSlider2 .MS-controls {
+    display: flex;
+    justify-content: center
+}
+
+#mixedSlider .MS-controls button,
+#mixedSlider2 .MS-controls button {
+    display: block;
+    margin: 10px;
+    color: var(--main);
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    background: transparent
+}
+
+.MS-content p {
+    margin: 14px;
+    text-align: center;
+    color: var(--text)
+}
+
+@media (max-width: 1050px) {
+
+    #mixedSlider,
+    #mixedSlider2 {
+        width: 90% ! important;
+    }
+}
+
+@media (max-width: 800px) {
+
+    #mixedSlider,
+    #mixedSlider2 {
+        width: 100% ! important;
+    }
+}
+
+/* End Groomsmen, Bridesmaids */
+
+/* Start Gifts */
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 40px auto
+}
+
+.container1 img {
+    width: fit-content;
+    margin: 20px auto;
+    opacity: .6;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    border-bottom: 4px solid var(--border)
+}
+
+.container1 img:hover {
+    opacity: 1
+}
+
+.container1 p {
+    margin: 10px 0;
+    color: var(--text)
+}
+
+@media (max-width: 1050px) {
+    .container1 {
+        padding: 10px;
+        width: 100%
+    }
+}
+
+/* End Gifts */
+
+/* Start Rsvp */
+
+fieldset {
+    width: 90%;
+    padding: 10px;
+    margin: 40px auto;
+    color: var(--text);
+    border-width: 1px
+}
+
+fieldset legend {
+    text-align: center;
+    padding: 0 6px
+}
+
+.container2 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column
+}
+
+.container2 input {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    width: 100%;
+    border: 1px solid var(--border)
+}
+
+.container2 label {
+    margin-top: 20px;
+    margin-bottom: 2px
+}
+
+.container2 label:nth-of-type(1) {
+    margin-top: 0
+}
+
+.container3 {
+    padding: 14px;
+    display: flex;
+    justify-content: space-around
+}
+
+.container3 div {
+    display: flex;
+    flex-direction: column
+}
+
+input[type=radio] {
+    display: block;
+    margin: 5px auto
+}
+
+@media (max-width: 1050px) {
+    #rsvp {
+        padding: 10px
+    }
+
+    fieldset {
+        width: 100%
+    }
+}
+
+@media (max-width: 575px) {
+    .container3 {
+        flex-direction: column
+    }
+
+    .container3 div {
+        margin: 10px auto
+    }
+}
+
+/* End Rsvp */
+
+/* Start Footer */
+
+footer p {
+    padding: 20px 5px;
+    text-align: center;
+    color: var(--text)
+}
+
+footer p span {
+    color: var(--main)
+}
+
+/* End Footer */
