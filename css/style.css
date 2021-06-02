@@ -69,7 +69,7 @@ li {
     list-style: none
 }
 
-/* Start Template Colors */
+/* Start Root */
 
 :root {
     --main: #de675f;
@@ -80,7 +80,18 @@ li {
     --border: #e4e4e4
 }
 
-/* End Template Colors */
+aside,
+aside nav a,
+.container1 img,
+.container2 input {
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+/* End Root */
 
 /* Start main */
 
@@ -93,7 +104,7 @@ main {
     margin-left: auto
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
     #mainContainer {
         border: 1px solid var(--border);
         width: 97%;
@@ -112,11 +123,6 @@ aside {
     z-index: 9999;
     width: 25%;
     height: 100vh;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
     background: url(../img/placeholder.jpg) center/cover
 }
 
@@ -142,11 +148,6 @@ aside nav a {
     border-top: 1px solid #fb918a;
     font-size: 14px;
     color: var(--white);
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s
 }
 
 aside nav a:hover,
@@ -161,30 +162,26 @@ aside nav span {
 }
 
 .menu {
-    position: fixed;
+    position: absolute;
     color: var(--main);
-    cursor: pointer
+    cursor: pointer;
 }
 
 .asideMini {
     top: 45px;
-    left: 0
+    height: fit-content;
+    width: 100%;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
     .menu {
+        left: 50%;
         z-index: 9999
     }
 
     aside {
-        width: 50%;
-        left: -1000px
-    }
-}
-
-@media (max-width: 575px) {
-    aside {
-        width: 100%
+        position: absolute;
+        top: -1000px
     }
 }
 
@@ -290,7 +287,7 @@ aside nav span {
     margin: 0 10px
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .intro article {
         padding: 5px;
         padding-bottom: 20px;
@@ -298,15 +295,11 @@ aside nav span {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 480px) {
+
     .title h2 {
         display: flex;
-        flex-direction: column
-    }
-}
-
-@media (max-width: 400px) {
-    .title h2 {
+        flex-direction: column;
         font-size: 80px
     }
 
@@ -377,13 +370,13 @@ aside nav span {
     text-align: right
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
     .container {
         width: 100%
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
         text-align: center
@@ -399,7 +392,7 @@ aside nav span {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .title img {
         display: none
     }
@@ -422,7 +415,7 @@ aside nav span {
     margin: 40px auto
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
     .fulid-container a {
         margin: 10px
     }
@@ -473,12 +466,12 @@ aside nav span {
 }
 
 .MS-content p {
-    margin: 14px;
+    margin: 14px 0;
     text-align: center;
     color: var(--text)
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
 
     #mixedSlider,
     #mixedSlider2 {
@@ -486,7 +479,7 @@ aside nav span {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 
     #mixedSlider,
     #mixedSlider2 {
@@ -510,11 +503,6 @@ aside nav span {
     width: fit-content;
     margin: 20px auto;
     opacity: .6;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
     border-bottom: 4px solid var(--border)
 }
 
@@ -527,7 +515,7 @@ aside nav span {
     color: var(--text)
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
     .container1 {
         padding: 10px;
         width: 100%
@@ -558,11 +546,6 @@ fieldset legend {
 }
 
 .container2 input {
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
     width: 100%;
     border: 1px solid var(--border)
 }
@@ -592,7 +575,7 @@ input[type=radio] {
     margin: 5px auto
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
     #rsvp {
         padding: 10px
     }
@@ -602,8 +585,9 @@ input[type=radio] {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .container3 {
+        text-align: center;
         flex-direction: column
     }
 
